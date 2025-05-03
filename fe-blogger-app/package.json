@@ -2,6 +2,9 @@
   "name": "fe-blogger-app",
   "private": true,
   "version": "0.0.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
