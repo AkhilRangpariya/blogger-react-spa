@@ -6,6 +6,7 @@ export class AuthService {
     // client = new Client();
     // account;
 
+    // when auth class instance created at that time directly. create required things client and account
     constructor() {
         this.client
             .setEndpoint(conf.appwriteUrl)
@@ -20,7 +21,7 @@ export class AuthService {
             const userAccount = await this.account.create(ID.unique(), email, password, name);
 
             if(userAccount){
-                // call another methods for after signup 
+                // call another methods for after signup -> directly login and move at home page 
                 return this.login({email, password});
             }
             else{
